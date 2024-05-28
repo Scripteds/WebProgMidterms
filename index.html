@@ -12,13 +12,13 @@
                 userName = prompt("Please enter your name:");
                 sessionStorage.setItem('userName', userName);
             }
-            document.getElementById('userName').textContent = `Hello ${userName}!`;
+            document.getElementById('welcomeMessage').textContent = `Hello ${userName}! Welcome to iACADEMY`;
         });
     </script>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Home Page</h1>
+        <h1>Welcome, Game Changer</h1>
     </header>
     <nav>
         <a href="https://scripteds.github.io/WebProgMidterms/index.html">Home</a>
@@ -29,12 +29,9 @@
         <a href="https://scripteds.github.io/WebProgMidterms/organizations.html">Organizations</a>
         <a href="https://scripteds.github.io/WebProgMidterms/events.html">Events</a>
         <a href="https://scripteds.github.io/WebProgMidterms/others.html">Others</a>
-        <span id="userName" style="float:right; margin-right:20px; color:#333;"></span>
     </nav>
     <main>
-        <h2>About Us</h2>
-        <p>This is a simple home page example using HTML and CSS.</p>
-        <p>Feel free to customize it as you like!</p>
+        <h2 id="welcomeMessage"></h2>
     </main>
     <footer>
         &copy; 2024 PSG
