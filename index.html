@@ -4,42 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 20px;
-            text-align: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let userName = sessionStorage.getItem('userName');
+            if (!userName) {
+                userName = prompt("Please enter your name:");
+                sessionStorage.setItem('userName', userName);
+            }
+            document.getElementById('userName').textContent = `Hello ${userName}!`;
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -54,6 +29,7 @@
         <a href="#">Organizations</a>
         <a href="#">Events</a>
         <a href="#">Others</a>
+        <span id="userName" style="float:right; margin-right:20px; color:#333;"></span>
     </nav>
     <main>
         <h2>About Us</h2>
@@ -61,7 +37,7 @@
         <p>Feel free to customize it as you like!</p>
     </main>
     <footer>
-        &copy; 2024 My Website
+        &copy; 2024 PSG
     </footer>
 </body>
 </html>
