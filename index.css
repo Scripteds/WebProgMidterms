@@ -1,17 +1,22 @@
-body 
-{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+ body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
 }
 
-header 
-{
-    background-color: #25356C;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+header {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+}
+
+main {
+            margin-top: 20px;
 }
 
 .logo
@@ -20,7 +25,6 @@ header
     width: 250px;
     float: left;
 }
-
 
 nav 
 {
