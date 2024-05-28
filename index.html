@@ -12,26 +12,21 @@
                 userName = prompt("Please enter your name:");
                 sessionStorage.setItem('userName', userName);
             }
-            document.getElementById('welcomeMessage').textContent = `Hello ${userName}! Welcome to iACADEMY`;
+            document.getElementById('welcomeMessage').textContent = `Hello ${userName}! Welcome to iACADEMY. Now that you’re an Official Game Changer, this Welcome Kit will guide you to your game-changing journey in iACADEMY.
+            Buckle up and hit the button below to start!
+`;
         });
     </script>
 </head>
 <body>
     <header>
-        <h1 id="welcomeMessage"></h1>
+        <h1 >Welcome, Game Changer</h1>
     </header>
     <nav>
-        <a href="https://scripteds.github.io/WebProgMidterms/index.html">Home</a>
-        <a href="https://scripteds.github.io/WebProgMidterms/About.html">About</a>
-        <a href="campus.html">Campus</a>
-        <a href="https://scripteds.github.io/WebProgMidterms/family.html">Meet the Family</a>
-        <a href="https://scripteds.github.io/WebProgMidterms/facilities.html">Facilities</a>
-        <a href="https://scripteds.github.io/WebProgMidterms/organizations.html">Organizations</a>
-        <a href="https://scripteds.github.io/WebProgMidterms/events.html">Events</a>
-        <a href="https://scripteds.github.io/WebProgMidterms/others.html">Others</a>
+        <a href="https://scripteds.github.io/WebProgMidterms/About.html">Let's Go!</a>
     </nav>
     <main>
-        <h2>Welcome, Game Changer</h2>
+        <h2 id="welcomeMessage"></h2>
     </main>
     <footer>
         &copy; 2024 PSG
