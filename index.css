@@ -47,11 +47,6 @@ nav a:hover {
     background-color: #555;
 }
 
-nav a.active {
-    background-color: #555;
-    border: 2px solid #fff;
-}
-
 main 
 {
     flex: 1;
