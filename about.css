@@ -10,7 +10,7 @@ body
 header 
 {
     background-color: #25356C;
-    color: #fff;
+    color: white;
     padding: 30px 0;
     text-align: center;
 }
@@ -19,7 +19,7 @@ header
 {
     height: 250px;
     width: 250px;
-    float: left;
+    float: left
 }
 
 nav 
