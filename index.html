@@ -12,21 +12,29 @@
                 userName = prompt("Please enter your name:");
                 sessionStorage.setItem('userName', userName);
             }
-            document.getElementById('welcomeMessage').textContent = `Hello ${userName}! Welcome to iACADEMY. Now that you’re an Official Game Changer, this Welcome Kit will guide you to your game-changing journey in iACADEMY.
-            Buckle up and hit the button below to start!
-`;
+            document.getElementById('welcomeMessage').textContent = `Hello ${userName}!`;
+            document.getElementById('welcomeText').textContent = `Welcome to iACADEMY. Now that you’re an Official Game Changer, this Welcome Kit will guide you to your game-changing journey in iACADEMY. Buckle up and hit the button below to start!`;
         });
     </script>
 </head>
 <body>
     <header>
-        <h1 >Welcome, Game Changer</h1>
+        <h1>Welcome, Game Changer</h1>
     </header>
-    <nav>
-        <a href="https://scripteds.github.io/WebProgMidterms/About.html">Let's Go!</a>
-    </nav>
     <main>
-        <h2 id="welcomeMessage"></h2>
+        <div id="welcomeContainer">
+            <h2 id="welcomeMessage"></h2>
+            <div class="hexagon">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2">
+                        <p id="welcomeText"></p>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <a href="https://scripteds.github.io/WebProgMidterms/About.html">Let's Go!</a>
+            </nav>
+        </div>
     </main>
     <footer>
         &copy; 2024 PSG
