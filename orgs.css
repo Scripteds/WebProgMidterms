@@ -19,7 +19,7 @@ header
 {
     height: 200px;
     width: 200px;
-    float: left
+    float: left;
 }
 
 nav 
@@ -54,33 +54,32 @@ footer
 
 .container 
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+    margin: 50px;
 }
 
 .box 
 {
-    height: 250px;
-    width: 450px;
+    height: 150px;
+    width: 100%;
     padding: 20px;
     border: 1px solid #1E3A8A;
     border-radius: 10px;
     background-color: #F3F4F6;
-    margin-bottom: 10px;
-    margin: 20px;
+    text-align: center;
 }
 
-.container:hover > :not( :hover)
+.container:hover > :not(:hover)
 {
     opacity: 0.4;
 }
 
 .org
 {
-    height: 200px;
-    width: 200px;
+    height: 80px;
+    width: 80px;
 }
 
 .modal
@@ -113,7 +112,8 @@ footer
     height: auto;
 }
 
-.close {
+.close 
+{
     color: #aaa;
     float: right;
     font-size: 28px;
