@@ -1,0 +1,110 @@
+body 
+{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header 
+{
+    background-color: #25356C;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.logo
+{
+    height: 175px;
+    width: 200px;
+    float: left;
+}
+
+nav 
+{
+    margin: 20px;
+    text-align: center;
+}
+
+nav a 
+{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+}
+
+main 
+{
+    padding: 20px;
+    text-align: center;
+}
+
+footer 
+{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.dorm-list 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dorm-item 
+{
+    display: flex;
+    align-items: stretch;
+    margin: 20px 0;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dorm-item.reverse 
+{
+    flex-direction: row-reverse;
+}
+
+.dorm-text, .dorm-image 
+{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dorm-text 
+{
+    height: 300px;
+    background-color: #FFBF23;
+    padding: 0 20px;
+}
+
+.dorm-image
+{
+    background-color: #FFBF23;
+
+}
+
+
+.dorm-image img 
+{
+    max-height: 300px;
+    width: 400px;
+    height: 100%;
+}
+
+.container
+{
+    background-color: #2FA5DA;
+}
