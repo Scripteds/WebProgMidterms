@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="facilities.css">
+    <title>Facilities</title>
+    <script>
+        function showContent(contentId) {
+            document.getElementById('mainContent').style.display = 'none';
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+
+        function showMainContent() {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById('mainContent').style.display = 'block';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sliders = document.querySelectorAll('.slider');
+
+            sliders.forEach(slider => {
+                let slideIndex = 0;
+                const slides = slider.querySelectorAll('.slide');
+                const nextBtn = slider.querySelector('.next');
+                const prevBtn = slider.querySelector('.prev');
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+
+                function nextSlide() {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    showSlide(slideIndex);
+                }
+
+                function prevSlide() {
+                    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+                    showSlide(slideIndex);
+                }
+
+                nextBtn.addEventListener('click', nextSlide);
+                prevBtn.addEventListener('click', prevSlide);
+
+                showSlide(slideIndex);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="img/iac-logo.png" alt="" class="logo">
+        <h1>About iAcademy</h1>
+        <nav>
+            <a href="https://scripteds.github.io/WebProgMidterms/Home.html">Home</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/About.html">About</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/campus.html">Campus</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/family.html">Meet the Family</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/facilities.html">Facilities</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/organizations.html">Organizations</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/events.html">Events</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/others.html">Others</a>
+        </nav>
+    </header>
+    <div id="mainContent">
+        <h1>FACILITIES</h1>
+        <div class="row">
+            <div class="image-container" onclick="showContent('groundFloor')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="Ground Floor">
+                <div class="text">Ground Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('mezzanine')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="Mezzanine">
+                <div class="text">Mezzanine</div>
+            </div>
+            <div class="image-container" onclick="showContent('sFTofF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="sFTofF">
+                <div class="text">2nd Floor to 4th Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('thirdF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="thirdF">
+                <div class="text">3rd Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('fourthF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="fourthF">
+                <div class="text">4th Floor</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container" onclick="showContent('fifthF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="fifthF">
+                <div class="text">5th Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('sixthF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="sixthF">
+                <div class="text">6th Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('seventhF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="seventhF">
+                <div class="text">7th Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('eightF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="eightF">
+                <div class="text">8th Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('ninthF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="ninthF">
+                <div class="text">9th Floor</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="image-container" onclick="showContent('tenthF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="tenthF">
+                <div class="text">10th Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('twelvethF')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="twelvethF">
+                <div class="text">12th Floor</div>
+            </div>
+            <div class="image-container" onclick="showContent('LP')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="LP">
+                <div class="text">Lower Penthouse</div>
+            </div>
+            <div class="image-container" onclick="showContent('UP')">
+                <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="UP">
+                <div class="text">Upper Penthouse</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="groundFloor" class="content">
+        <h1>GROUND FLOOR</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/facilities-img/LOBBY-MAKATI.jpg" alt="Building Lobby & Turnstile System">
+                    <p>Building Lobby & Turnstile System</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Equipment Center">
+                    <p>Equipment Center</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/PARTNERSHIVE-MAKATI.jpg" alt="Partner’s Hive">
+                    <p>Partner’s Hive</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Gamers Hive">
+                    <p>Gamers Hive</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="ATM Machine">
+                    <p>ATM Machine</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Admissions">
+                    <p>Admissions</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Registrars">
+                    <p>Registrars</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Finance">
+                    <p>Finance</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Clinic">
+                    <p>Clinic</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="mezzanine" class="content">
+        <h1>MEZZANINE</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/gray.png" alt="MeetingRooms">
+                    <p>Meeting Rooms</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="OSAS">
+                    <p>OSAS</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="ELPD">
+                    <p>ELPD</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="ITDep">
+                    <p>IT Department</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="HRDep">
+                    <p>HR Department</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="ExecutiveOffice">
+                    <p>Executive Office</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="sFTofF" class="content">
+        <h1>2nd Floor to 4th Floor</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/gray.png" alt="Parking">
+                    <p>Parking Area</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="PurchasingDep">
+                    <p>Purchasing Department</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="FacilitiesStockRoom">
+                    <p>Facilities Stock Room</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="thirdF" class="content">
+        <h1>3rd Floor</h1>
+            <img src="img/gray.png" alt="Admin Office">
+            <p>Admin Office</p>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="fourthF" class="content">
+        <h1>4th Floor</h1>
+            <img src="img/gray.png" alt="Parking Area">
+            <p>Parking Area</p>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="fifthF" class="content">
+        <h1>5th Floor</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/facilities-img/CAFETERIA2-MAKATI.jpg" alt="Cafeteria">
+                    <p>Cafeteria</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/CAFETERIA1-MAKATI.jpg" alt="Grass Area / Student Lounge">
+                    <p>Grass Area / Student Lounge</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Employee Lounge">
+                    <p>Employee Lounge</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="sixthF" class="content">
+        <h1>6th Floor</h1>
+        <img src="img/gray.png" alt="SHS Library">
+        <p>SHS Library</p>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="seventhF" class="content">
+        <h1>7th Floor</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/facilities-img/SEWINGROOM-MAKATI.jpg" alt="Sewing Room">
+                    <p>Sewing Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Pink Room / Fashion Design Room">
+                    <p>Pink Room / Fashion Design Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/GREENSCREEN-MAKATI.jpg" alt="Green Room">
+                    <p>Green Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/MUSICROOM-MAKATI.jpg" alt="Sound Room">
+                    <p>Sound Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/MUSICROOM2-MAKATI.jpg" alt="Sound Room">
+                    <p>Sound Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/MMALAB-MAKATI.jpg" alt="Multimedia Arts Laboratory">
+                    <p>Multimedia Arts Laboratory</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="eightF" class="content">
+        <h1>8th Floor</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/gray.png" alt="Faculty Room">
+                    <p>Faculty Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/MMALAB-MAKATI.jpg" alt="MMA Laboratory">
+                    <p>MMA Laboratory</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="ninthF" class="content">
+        <h1>9th Floor</h1>
+        <img src="img/gray.png" alt="College Library">
+        <p>College Library</p>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="tenthF" class="content">
+        <h1>10th Floor</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/gray.png" alt="Lightbox Room">
+                    <p>Lightbox Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/iMACLAB-MAKATI.jpg" alt="Mac Laboratory">
+                    <p>Mac Laboratory</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/MMALAB-MAKATI.jpg" alt="Cintiq Laboratory">
+                    <p>Cintiq Laboratory</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/COMPLAB-MAKATI.jpg" alt="Unity Game Laboratory">
+                    <p>Unity Game Laboratory</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="MPSD Laboratory">
+                    <p>MPSD Laboratory</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Wet and Dry Drawing Room">
+                    <p>Wet and Dry Drawing Room</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Chemistry and Physics Laboratory">
+                    <p>Chemistry and Physics Laboratory</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/MMALAB-MAKATI.jpg" alt="Multimedia Arts Laboratory">
+                    <p>Multimedia Arts Laboratory</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="twelvethF" class="content">
+        <h1>12th Floor</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/gray.png" alt="Auditorium">
+                    <p>Auditorium</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Multipurpose Hall">
+                    <p>Multipurpose Hall</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/NEXUS-MAKATI.jpg" alt="Nexus Gallery">
+                    <p>Nexus Gallery</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="LP" class="content">
+        <h1>Lower Penthouse</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/facilities-img/GYM1-MAKATI.jpg" alt="Gymnasium">
+                    <p>Gymnasium</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/GYM2-MAKATI.jpg" alt="Gymnasium">
+                    <p>Gymnasium</p>
+                </div>
+                <div class="slide">
+                    <img src="img/gray.png" alt="Garden Deck (East Wing / West Wing)">
+                    <p>Garden Deck (East Wing / West Wing)</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="UP" class="content">
+        <h1>Upper Penthouse</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <img src="img/facilities-img/TRACK-MAKATI.jpg" alt="Running Track">
+                    <p>Running Track</p>
+                </div>
+                <div class="slide">
+                    <img src="img/facilities-img/LIBRARY-MAKATI.jpg" alt="Library">
+                    <p>Library</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+</body>
+</html>
