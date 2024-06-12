@@ -32,6 +32,10 @@
         .section ul li {
             margin-bottom: 5px;
         }
+        /* Style for bold items in the checklist */
+        .section ul li label {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -56,43 +60,40 @@
                   <img src="img/admission.jpg" alt="Admissions Department">
                     <h2>Admissions Department</h2>
                     <ul>
-                        <li>Application Process (Exam and Interview)</li>
-                        <li>Reservation Process</li>
-                        <li>Enrollment Process</li>
-                        <li>Submission of Pending Requirements</li>
+                        <li><label>Application Process (Exam and Interview)</label></li>
+                        <li><label>Reservation Process</label></li>
+                        <li><label>Enrollment Process</label></li>
+                        <li><label>Submission of Pending Requirements</label></li>
                     </ul>
                 </div>
                 <div class="section">
                   <img src="img/it.jpg" alt="IT Department">
                     <h2>IT Department</h2>
                     <ul>
-                        <li>ID Picture Taking</li>
-                        <li>Configure and Activate NEO LMS Account</li>
+                        <li><label>ID Picture Taking</label></li>
+                        <li><label>Configure and Activate NEO LMS Account</label></li>
                     </ul>
                 </div>
                 <div class="section">
                   <img src="img/clinic.jpg" alt="Clinic">
                     <h2>Clinic</h2>
                     <ul>
-                        <li>Medical and Dental Check up</li>
+                        <li><label>Medical and Dental Check up</label></li>
                     </ul>
                 </div>
                 <div class="section">
                   <img src="img/student.jpg" alt="Student Orientation">
-                    <h2>Online Student Orientation</h2>
+                    <h2><label>Online Student Orientation</label></h2>
                 </div>
                 <div class="section">
                   <img src="img/soar2.jpg" alt="SOAR">
-                    <h2>SOAR 2024!</h2>
+                    <h2><label>SOAR 2024!</label></h2>
                 </div>
                 <div class="section">
                     <h2>First-Day Guide/Tips</h2>
                     <ul>
-                        <li>First Day Must Haves:</li>
-                        <ul>
-                            <li>Notebook</li>
-                            <li>Pen</li>
-                        </ul>
+                        <li>Notebook</li>
+                        <li>Pen</li>
                     </ul>
                 </div>
                 <div class="section">
@@ -115,7 +116,7 @@
                     <ul>
                         <li>
                             <input type="checkbox" id="admissions" name="admissions">
-                            <label for="admissions">Admissions Department</label>
+                            <label for="admissions"><b>Admissions Department</b></label>
                             <ul>
                                 <li>Application Process (Exam and Interview)</li>
                                 <li>Reservation Process</li>
@@ -125,7 +126,7 @@
                         </li>
                         <li>
                             <input type="checkbox" id="it" name="it">
-                            <label for="it">IT Department</label>
+                            <label for="it"><b>IT Department</b></label>
                             <ul>
                                 <li>ID Picture Taking</li>
                                 <li>Configure and Activate NEO LMS Account</li>
@@ -133,18 +134,18 @@
                         </li>
                         <li>
                             <input type="checkbox" id="clinic" name="clinic">
-                            <label for="clinic">Clinic</label>
+                            <label for="clinic"><b>Clinic</b></label>
                             <ul>
                                 <li>Medical and Dental Check up</li>
                             </ul>
                         </li>
                         <li>
                             <input type="checkbox" id="orientation" name="orientation">
-                            <label for="orientation">Online Student Orientation</label>
+                            <label for="orientation"><b>Online Student Orientation</b></label>
                         </li>
                         <li>
                             <input type="checkbox" id="soar" name="soar">
-                            <label for="soar">SOAR 2024!</label>
+                            <label for="soar"><b>SOAR 2024!</b></label>
                         </li>
                     </ul>
                 </div>
