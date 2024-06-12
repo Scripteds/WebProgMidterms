@@ -113,24 +113,24 @@
                 <div class="section">
                     <h2>Checklist</h2>
                     <ul>
-                        <li>Admissions Department</li>
+                        <li><input type="checkbox" id="admissions" onclick="saveState()"> Admissions Department</li>
                         <ul>
                             <li>Application Process (Exam and Interview)</li>
                             <li>Reservation Process</li>
                             <li>Enrollment Process</li>
                             <li>Submission of Pending Requirements</li>
                         </ul>
-                        <li> IT Department</li>
+                        <li><input type="checkbox" id="it" onclick="saveState()"> IT Department</li>
                         <ul>
                             <li>ID Picture Taking</li>
                             <li>Configure and Activate NEO LMS Account</li>
                         </ul>
-                        <li> Clinic</li>
+                        <li><input type="checkbox" id="clinic" onclick="saveState()"> Clinic</li>
                         <ul>
                             <li>Medical and Dental Check up</li>
                         </ul>
-                        <li> Online Student Orientation</li>
-                        <li> SOAR 2024!</li>
+                        <li><input type="checkbox" id="orientation" onclick="saveState()"> Online Student Orientation</li>
+                        <li><input type="checkbox" id="soar" onclick="saveState()"> SOAR 2024!</li>
                     </ul>
                 </div>
             </div>
@@ -139,5 +139,24 @@
     <footer>
         &copy; 2024 PSG
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Load the state of checkboxes from localStorage
+            document.getElementById("admissions").checked = sessionStorage.getItem("admissions") === "true";
+            document.getElementById("it").checked = sessionStorage.getItem("it") === "true";
+            document.getElementById("clinic").checked = sessionStorage.getItem("clinic") === "true";
+            document.getElementById("orientation").checked = sessionStorage.getItem("orientation") === "true";
+            document.getElementById("soar").checked = sessionStorage.getItem("soar") === "true";
+        });
+
+        function saveState() {
+            // Save the state of checkboxes to localStorage
+            sessionStorage.setItem("admissions", document.getElementById("admissions").checked);
+            sessionStorage.setItem("it", document.getElementById("it").checked);
+            sessionStorage.setItem("clinic", document.getElementById("clinic").checked);
+            sessionStorage.setItem("orientation", document.getElementById("orientation").checked);
+            sessionStorage.setItem("soar", document.getElementById("soar").checked);
+        }
+    </script>
 </body>
 </html>
