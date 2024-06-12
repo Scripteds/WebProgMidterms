@@ -7,7 +7,7 @@ body
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: url(img/FACADE\ -\ MAKATI.png);
+    background-image: url(img/facilities-img/FACADE\ -\ MAKATI.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
