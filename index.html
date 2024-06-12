@@ -6,22 +6,6 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Home Page</title>
     <link rel="stylesheet" href="index.css">
-    <style>
-        /* Custom CSS for the "Let's Go!" button */
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: white;
-            background-color: #25356C; /* iACADEMY blue */
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #1A235F; /* Darker shade on hover */
-        }
-    </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             let userName = sessionStorage.getItem('userName');
@@ -41,12 +25,8 @@
     <main>
         <div>
             <h2 id="welcomeMessage"></h2>
-            <div>
-                <div>
-                    <div>
-                        <p id="welcomeText"></p>
-                    </div>
-                </div>
+            <div class="welcome-box">
+                <p id="welcomeText"></p>
             </div>
             <nav>
                 <a href="https://scripteds.github.io/WebProgMidterms/About.html">Let's Go!</a>
