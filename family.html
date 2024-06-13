@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="family.css">
+    <title>Meet the Family</title>
+    <script>
+        function showContent(contentId) {
+            document.getElementById('mainContent').style.display = 'none';
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+
+        function showMainContent() {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+            document.getElementById('mainContent').style.display = 'block';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const sliders = document.querySelectorAll('.slider');
+
+            sliders.forEach(slider => {
+                let slideIndex = 0;
+                const slides = slider.querySelectorAll('.slide');
+                const nextBtn = slider.querySelector('.next');
+                const prevBtn = slider.querySelector('.prev');
+
+                function showSlide(index) {
+                    slides.forEach((slide, i) => {
+                        slide.style.display = i === index ? 'block' : 'none';
+                    });
+                }
+
+                function nextSlide() {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    showSlide(slideIndex);
+                }
+
+                function prevSlide() {
+                    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+                    showSlide(slideIndex);
+                }
+
+                nextBtn.addEventListener('click', nextSlide);
+                prevBtn.addEventListener('click', prevSlide);
+
+                showSlide(slideIndex);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img src="img/iac-logo.png" alt="" class="logo">
+        <h1>Meet the Family</h1>
+        <nav>
+            <a href="https://scripteds.github.io/WebProgMidterms/Home.html">Home</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/About.html">About</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/campus.html">Campus</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/family.html">Meet the Family</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/facilities.html">Facilities</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/organizations.html">Organizations</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/events.html">Events</a>
+            <a href="https://scripteds.github.io/WebProgMidterms/others.html">Others</a>
+        </nav>
+    </header>
+    <div id="mainContent">
+        <h1>Meet the Family</h1>
+        <div class="row">
+            <div class="image-container" onclick="showContent('managementCommittee')">
+                <img src="img/dummy.png" alt="Management Committee">
+                <div class="text">Management Committee</div>
+            </div>
+            <div class="image-container" onclick="showContent('academicHeads')">
+                <img src="img/dummy.png" alt="Academic Heads">
+                <div class="text">Academic Heads</div>
+            </div>
+            <div class="image-container" onclick="showContent('departments')">
+                <img src="img/dummy.png" alt="Departments">
+                <div class="text">Departments</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="managementCommittee" class="content">
+        <h1>MEET THE MANAGEMENT COMMITTEE</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Dr. Vanessa Tanco - CEO & President</p>
+              </div>
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Ms. Raquel P. Wong - COO</p>
+              </div>
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Ms. Cecilia Sy - VP for Academics</p>
+              </div>
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Ms. Joanna Maria Caneo - AVP for Administration</p>
+              </div>
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Ms. Marygil Reygie Tolentino - AVP for Human Resources</p>
+              </div>
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Ms. Anna Fernandez - Senior Manager for Student Affairs and Services</p>
+              </div>
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Ms. Teresa Bete - Senior Manager for Finance</p>
+              </div>
+              <div class="slide">
+                  <div class="image-container">
+                      <img src="img/dummy.png" alt="">
+                  </div>
+                  <p>Mr. Clarence Gomez - Senior Manager for Admissions and Corporate Communications</p>
+              </div>
+          </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="academicHeads" class="content">
+        <h1>MEET THE ACADEMIC HEADS</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <h2>SCHOOL OF DESIGN AND THE ARTS (SODA)</h2>
+                    <div class="image-container">
+                    </div>
+                    <p>Dean Jon Cuyson - SODA Dean <img src="img/dummy.png" alt=""></p>
+                    <p>Ms. Weena Espardinez - Chairperson for Animation <img src="img/dummy.png" alt=""></p>
+                    <p>Ms. Gilly Tribiana - Chairperson for Multimedia Arts <img src="img/dummy.png" alt=""></p>
+                    <p>Dean Jennifer Jean Dee - Chairperson for Fashion and Design <img src="img/dummy.png" alt=""></p>
+                    <p>Sir Gerard - MPSD <img src="img/dummy.png" alt=""></p>
+                </div>
+                <div class="slide">
+                    <h2>SCHOOL OF BUSINESS AND LIBERAL ARTS (SBLA)</h2>
+                    <div class="image-container">
+                    </div>
+                    <p>Dean John Padua - SBLA Dean <img src="img/dummy.png" alt=""></p>
+                    <p>Ms. Madeleine Batac - Chairperson of Psychology <img src="img/dummy.png" alt=""></p>
+                    <p>Ms. Leizandra Pugong - Chairperson for Accountancy and Business <img src="img/dummy.png" alt=""></p>
+                    <p>Mr. Gian Carlo Alcantara - Chairperson for General Education <img src="img/dummy.png" alt=""></p>
+                </div>
+                <div class="slide">
+                    <h2>SCHOOL OF COMPUTING (SOC)</h2>
+                    <div class="image-container">
+                    </div>
+                    <p>Dean Francisco “Kiko” Napalit - OIC Dean for SOC <img src="img/dummy.png" alt=""></p>
+                    <p>Mr. Bennet Tanyag - Chairperson for Software Engineering and Web Development <img src="img/dummy.png" alt=""></p>
+                    <p>Mr. Carl Louie So - Chairperson for Game Development <img src="img/dummy.png" alt=""></p>
+                    <p>Ms. Crisola Tan - Chairperson for Computer Science <img src="img/dummy.png" alt=""></p>
+                </div>
+                <div class="slide">
+                    <h2>SENIOR HIGH SCHOOL (SHS)</h2>
+                    <div class="image-container">
+                    </div>
+                    <p>Mr. Paolo Antonio Noceda - Principal <img src="img/dummy.png" alt=""></p>
+                    <p>Mr. Peter Hans Tejada - Assistant Principal <img src="img/dummy.png" alt=""></p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+
+    <div id="departments" class="content">
+        <h1>MEET THE DEPARTMENTS</h1>
+        <div class="slider">
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <div class="slides-wrapper">
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Admissions Department (Ground Floor)</h2>
+                    <p>For processing and assisting all incoming students and application inquiries.</p>
+                    <p>Email: admissions@iacademy.edu.ph</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Registrar’s Office (Ground Floor)</h2>
+                    <p>For processing and assisting all current students with records</p>
+                    <p>Email: registrar@iacademy.edu.ph</p>
+                    <p>Landline: 8889-5555 loc 2112 and 2115</p>
+                    <p>Mobile Number: 09171304282</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Finance Office (Ground Floor)</h2>
+                    <p>For payments and financial concerns</p>
+                    <p>Email: shsfinance@iacademy.edu.ph, collegefinance@iacademy.edu.ph</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Information Technology Department (Mezzanine)</h2>
+                    <p>For IT-related and NEO LMS concerns</p>
+                    <p>Email: infotech@iacademy.edu.ph</p>
+                    <p>Telephone Number: 8889-5555 local 2223-2226</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Office of Student Affairs and Services (Mezzanine)</h2>
+                    <p>For student services and student org concerns</p>
+                    <p>Email: osas@iacademy.edu.ph</p>
+                    <p>For guidance or student support concerns</p>
+                    <p>Email: guidance@iacademy.edu.ph</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Scholarships Department  (Mezzanine)</h2>
+                    <p>For scholarship, referral discounts, and financial aid concerns</p>
+                    <p>Email: scholarship@iacademy.edu.ph</p>
+                    <p>Landline Number: Local 2607</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>External Linkages and Partnerships Department (Mezzanine)</h2>
+                    <p>For industry partnerships and community development projects</p>
+                    <p>Email: externallinkages@iacademy.edu.ph</p>
+                    <p>For internship-related inquiries and support</p>
+                    <p>Email: internsupport@iacademy.edu.ph</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Human Resource Management (Mezzanine)</h2>
+                    <p>For HR-related concerns</p>
+                    <p>Email: hr@iacademy.edu.ph</p>
+                    <p>Landline: 8 889-5555 loc 2112 and 2115</p>
+                    <p>Mobile Number: 09171304282</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Building Admin Office (2nd Floor)</h2>
+                    <p>For room and equipment reservation concerns</p>
+                    <p>Email: adminfacilities@iacademy.edu.ph</p>
+                    <p>Local Landline: 2233, 2234, and 2235</p>
+                    <p>Mobile Number: 09171700011</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Purchasing Department (3rd Floor)</h2>
+                    <p>For purchasing and discounted item concerns</p>
+                    <p>Email: purchasing@iacademy.edu.ph</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Academics Department (8th Floor)</h2>
+                    <p>For academic-related concerns</p>
+                </div>
+                <div class="slide">
+                    <div class="image-container">
+                        <img src="img/dummy.png" alt="">
+                    </div>
+                    <h2>Library</h2>
+                    <p>For library concerns</p>
+                    <p>Email: library@iacademy.edu.ph</p>
+                </div>
+            </div>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+        <button class="back-button" onclick="showMainContent()">Back</button>
+    </div>
+</body>
+</html>
